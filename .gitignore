@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# settings
+settings.py
+
+# pipelines
+pipelines.py

@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from web.views import post
-
+from web.views import post, composer
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^show_list/$', post.show_list)
+    url(r'^show_list/$', post.show_list),
+    url(r'^show_list/(?P<page>\d+)/$', post.show_list),
+    url(r'^user/oneuser/userid-(?P<cid>\d+)$', composer.oneuser),
+    url(r'^u(?P<cid>\d+)$', composer.homepage),
+    url(r'^a(?P<pid>\d+)$', post.detail),
+    url(r'^article/filmplay/ts-getCommentApi$', post.comments),
 ]

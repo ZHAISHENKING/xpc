@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5cb433-921b-42e1-9d1e-c7b150b594be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cpsettings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/homepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/oneuser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/views/composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpc/xpc/cppipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xpc/xpc/cpsettings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xpc/xpc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xpc/xpc/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +30,29 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="267">
+              <caret line="61" column="19" lean-forward="true" selection-end-line="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oneuser.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/templates/oneuser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#637#669#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,8 +60,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="424">
+              <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
               <folding>
                 <element signature="e#468#507#0" expanded="true" />
               </folding>
@@ -34,53 +69,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/post.py">
+      <file leaf-file-name="cpsettings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/cpsettings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="354">
+              <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/templates/post_list.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#29850#29856#0#HTML" expanded="true" />
-                <element signature="e#29856#29862#0#HTML" expanded="true" />
-                <element signature="e#29862#29868#0#HTML" expanded="true" />
-                <element signature="e#29868#29874#0#HTML" expanded="true" />
-                <element signature="e#29874#29880#0#HTML" expanded="true" />
-                <element signature="e#29880#29886#0#HTML" expanded="true" />
-                <element signature="e#29886#29892#0#HTML" expanded="true" />
-                <element signature="e#29892#29898#0#HTML" expanded="true" />
-                <element signature="e#29898#29904#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="321">
+              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="cpsettings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xpc/xpc/cpsettings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/urls.py">
+      <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xpc/xpc/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#637#669#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="177">
+              <caret line="17" column="17" selection-end-line="49" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cppipelines.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xpc/xpc/cppipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xpc/xpc/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="39" column="19" selection-end-line="191" />
             </state>
           </provider>
         </entry>
@@ -101,10 +139,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/web/settings.py" />
+        <option value="$PROJECT_DIR$/xpc/xpc/settings.py" />
+        <option value="$PROJECT_DIR$/web/views/composer.py" />
+        <option value="$PROJECT_DIR$/web/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/web/templates/oneuser.html" />
         <option value="$PROJECT_DIR$/web/templates/post_list.html" />
         <option value="$PROJECT_DIR$/web/urls.py" />
-        <option value="$PROJECT_DIR$/web/models.py" />
         <option value="$PROJECT_DIR$/web/views/post.py" />
+        <option value="$PROJECT_DIR$/web/templates/comments.html" />
+        <option value="$PROJECT_DIR$/web/templates/post.html" />
+        <option value="$PROJECT_DIR$/web/models.py" />
+        <option value="$PROJECT_DIR$/web/cpsettings.py" />
+        <option value="$PROJECT_DIR$/xpc/xpc/cpsettings.py" />
+        <option value="$PROJECT_DIR$/xpc/xpc/cppipelines.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -124,10 +172,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="245" />
+    <option name="x" value="132" />
     <option name="y" value="23" />
-    <option name="width" value="1232" />
-    <option name="height" value="681" />
+    <option name="width" value="1245" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -151,10 +199,22 @@
               <item name="xpc" type="b2602c69:ProjectViewProjectNode" />
               <item name="xpc" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xpc" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xpc" type="462c0819:PsiDirectoryNode" />
+              <item name="xpc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xpc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xpc" type="462c0819:PsiDirectoryNode" />
               <item name="xpc" type="462c0819:PsiDirectoryNode" />
               <item name="xpc" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -173,6 +233,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/views" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -226,7 +287,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="245" y="23" width="1232" height="681" extended-state="0" />
+    <frame x="132" y="23" width="1245" height="777" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -234,9 +295,9 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.27568492" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.425" />
       <window_info anchor="right" id="Remote Host" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15882353" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15876974" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
@@ -262,10 +323,53 @@
     <entry file="file://$PROJECT_DIR$/web/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/composer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="1988" lean-forward="true" selection-start-line="1988" selection-end-line="1988" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#29818#29824#0#HTML" expanded="true" />
+            <element signature="e#29824#29830#0#HTML" expanded="true" />
+            <element signature="e#29830#29836#0#HTML" expanded="true" />
+            <element signature="e#29836#29842#0#HTML" expanded="true" />
+            <element signature="e#29842#29848#0#HTML" expanded="true" />
+            <element signature="e#29848#29854#0#HTML" expanded="true" />
+            <element signature="e#29854#29860#0#HTML" expanded="true" />
+            <element signature="e#29860#29866#0#HTML" expanded="true" />
+            <element signature="e#29866#29872#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#50191#50197#0#HTML" expanded="true" />
+            <element signature="e#50367#50373#0#HTML" expanded="true" />
+            <element signature="e#50584#50590#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#p#2;n#div#0;n#div#2;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#4;n#p#2;n#div#0;n#div#2;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#5;n#p#2;n#div#0;n#div#2;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#6;n#p#2;n#div#0;n#div#2;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#11;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="194">
+          <caret line="1279" column="5" lean-forward="true" selection-start-line="1279" selection-start-column="5" selection-end-line="1279" selection-end-column="5" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -282,10 +386,120 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/post.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#1303#1309#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="2448" column="16" lean-forward="true" selection-start-line="2448" selection-start-column="16" selection-end-line="2448" selection-end-column="16" />
+          <folding>
+            <element signature="e#5942#5963#0#HTML" expanded="true" />
+            <element signature="e#20802#20829#0#HTML" expanded="true" />
+            <element signature="e#30103#30109#0#HTML" expanded="true" />
+            <element signature="e#30109#30115#0#HTML" expanded="true" />
+            <element signature="e#30115#30121#0#HTML" expanded="true" />
+            <element signature="e#30121#30127#0#HTML" expanded="true" />
+            <element signature="e#30127#30133#0#HTML" expanded="true" />
+            <element signature="e#30133#30139#0#HTML" expanded="true" />
+            <element signature="e#30139#30145#0#HTML" expanded="true" />
+            <element signature="e#30145#30151#0#HTML" expanded="true" />
+            <element signature="e#30151#30157#0#HTML" expanded="true" />
+            <element signature="e#40320#40430#0#HTML" expanded="true" />
+            <element signature="e#40652#40694#0#HTML" expanded="true" />
+            <element signature="e#41959#41992#0#HTML" expanded="true" />
+            <element signature="e#47163#47184#0#HTML" expanded="true" />
+            <element signature="e#47757#47779#0#HTML" expanded="true" />
+            <element signature="e#49954#49960#0#HTML" expanded="true" />
+            <element signature="e#50658#50664#0#HTML" expanded="true" />
+            <element signature="e#51431#51475#0#HTML" expanded="true" />
+            <element signature="e#55683#55703#0#HTML" expanded="true" />
+            <element signature="e#55884#55904#0#HTML" expanded="true" />
+            <element signature="e#56085#56105#0#HTML" expanded="true" />
+            <element signature="e#56285#56305#0#HTML" expanded="true" />
+            <element signature="e#56485#56505#0#HTML" expanded="true" />
+            <element signature="e#56685#56705#0#HTML" expanded="true" />
+            <element signature="e#56885#56905#0#HTML" expanded="true" />
+            <element signature="e#57085#57105#0#HTML" expanded="true" />
+            <element signature="e#57285#57305#0#HTML" expanded="true" />
+            <element signature="e#57485#57505#0#HTML" expanded="true" />
+            <element signature="e#57686#57706#0#HTML" expanded="true" />
+            <element signature="e#57887#57907#0#HTML" expanded="true" />
+            <element signature="e#58088#58108#0#HTML" expanded="true" />
+            <element signature="e#58289#58309#0#HTML" expanded="true" />
+            <element signature="e#58490#58510#0#HTML" expanded="true" />
+            <element signature="e#58693#58713#0#HTML" expanded="true" />
+            <element signature="e#58894#58914#0#HTML" expanded="true" />
+            <element signature="e#59096#59116#0#HTML" expanded="true" />
+            <element signature="e#59298#59318#0#HTML" expanded="true" />
+            <element signature="e#59500#59520#0#HTML" expanded="true" />
+            <element signature="e#59702#59722#0#HTML" expanded="true" />
+            <element signature="e#59905#59925#0#HTML" expanded="true" />
+            <element signature="e#60107#60127#0#HTML" expanded="true" />
+            <element signature="e#60310#60330#0#HTML" expanded="true" />
+            <element signature="e#60513#60533#0#HTML" expanded="true" />
+            <element signature="e#60716#60736#0#HTML" expanded="true" />
+            <element signature="e#60919#60939#0#HTML" expanded="true" />
+            <element signature="e#61123#61143#0#HTML" expanded="true" />
+            <element signature="e#61326#61346#0#HTML" expanded="true" />
+            <element signature="e#61528#61548#0#HTML" expanded="true" />
+            <element signature="e#61729#61749#0#HTML" expanded="true" />
+            <element signature="e#61931#61951#0#HTML" expanded="true" />
+            <element signature="e#62134#62154#0#HTML" expanded="true" />
+            <element signature="e#62336#62356#0#HTML" expanded="true" />
+            <element signature="e#62538#62558#0#HTML" expanded="true" />
+            <element signature="e#62740#62760#0#HTML" expanded="true" />
+            <element signature="e#62942#62962#0#HTML" expanded="true" />
+            <element signature="e#63145#63165#0#HTML" expanded="true" />
+            <element signature="e#63346#63366#0#HTML" expanded="true" />
+            <element signature="e#63550#63570#0#HTML" expanded="true" />
+            <element signature="e#63753#63773#0#HTML" expanded="true" />
+            <element signature="e#64189#64214#0#HTML" expanded="true" />
+            <element signature="e#64450#64508#0#HTML" expanded="true" />
+            <element signature="e#72403#72422#0#HTML" expanded="true" />
+            <element signature="e#83704#83965#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/oneuser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#637#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="424">
+          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
           <folding>
             <element signature="e#468#507#0" expanded="true" />
           </folding>
@@ -294,28 +508,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="267">
+          <caret line="61" column="19" lean-forward="true" selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/post.py">
+    <entry file="file://$PROJECT_DIR$/web/cpsettings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="354">
+          <caret line="125" column="23" lean-forward="true" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/urls.py">
+    <entry file="file://$PROJECT_DIR$/xpc/xpc/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#637#669#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="39" column="19" selection-end-line="191" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xpc/xpc/cpsettings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xpc/xpc/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="17" column="17" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xpc/xpc/cppipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
         </state>
       </provider>
     </entry>

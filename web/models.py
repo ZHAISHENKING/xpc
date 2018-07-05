@@ -10,7 +10,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     commentid = models.IntegerField(primary_key=True)
     pid = models.BigIntegerField()
     cid = models.BigIntegerField()
@@ -26,7 +26,7 @@ class Comments(models.Model):
         db_table = 'comments'
 
 
-class Composers(models.Model):
+class Composer(models.Model):
     cid = models.BigIntegerField(primary_key=True)
     banner = models.CharField(max_length=512)
     avatar = models.CharField(max_length=512)
@@ -43,8 +43,18 @@ class Composers(models.Model):
         managed = False
         db_table = 'composers'
 
+    @property
+    def posts(self):
+        cr_list = Copyright.objects.filter(cid=self.cid).all()
+        post_list = []
+        for cr in cr_list:
+            post = Post.objects.get(pid=cr.pid)
+            post.roles = cr.roles
+            post_list.append(post)
+        return post_list
 
-class Copyrights(models.Model):
+
+class Copyright(models.Model):
     pcid = models.CharField(primary_key=True, max_length=32)
     pid = models.BigIntegerField()
     cid = models.BigIntegerField()
@@ -72,3 +82,33 @@ class Post(models.Model):
     class Meta:
         managed = False
         db_table = 'posts'
+
+    def durations(self):
+        # 取两个数的商和余数
+        minutes, seconds = divmod(self.duration, 60)
+        # 指定字符串的宽度为2，如果不足2位，在前面添加0
+        minutes = str(minutes).zfill(2)
+        seconds = str(seconds).zfill(2)
+        return "%s' %s''" % (minutes, seconds)
+
+    @property
+    def composers(self):
+        """获取当前作品的所有作者信息"""
+
+        # 先查询copyright中间表，得到作品和作者的对应关系
+        cr_list = Copyright.objects.filter(pid=self.pid).all()
+        composers = []
+        for cr in cr_list:
+            # 获取Composer对象
+            composer = Composer.objects.get(cid=cr.cid)
+            composer.roles = cr.roles
+            # 放到一个列表
+            composers.append(composer)
+        # 返回composer对象列表
+        return composers
+
+    @property
+    def background(self):
+        raw_img, sep, param = self.preview.partition('@')
+        param = "960w_540h_50-30bl_1e_1c"
+        return '%s%s%s' % (raw_img, sep, param)
