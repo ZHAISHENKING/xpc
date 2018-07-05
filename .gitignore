@@ -108,3 +108,6 @@ settings.py
 
 # pipelines
 pipelines.py
+
+.idea/
+.vscode/
