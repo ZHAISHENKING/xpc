@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.generic import TemplateView
 from web.views import post, composer
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,4 +27,16 @@ urlpatterns = [
     url(r'^u(?P<cid>\d+)$', composer.homepage),
     url(r'^a(?P<pid>\d+)$', post.detail),
     url(r'^article/filmplay/ts-getCommentApi$', post.comments),
+    url(r'^register$', TemplateView.as_view(template_name='register.html')),  # 显示注册页面
+    url(r'^api/v1/mobile/send$', composer.send_code),  # 发送手机验证码
+    url(r'^api/v1/user/register$', composer.do_register),  # 执行注册操作
+    url(r'^login/$', TemplateView.as_view(template_name='login.html')),  # 显示登录页面
+    url(r'^api/v1/user/login$', composer.do_login),  # 执行登录操作
+    url(r'^logout/$', composer.logout),  # 执行注销操作
+    # 忘记密码页面
+    url(r'^find_password/$',
+        TemplateView.as_view(template_name='find_password.html')),
+    url(r'^api/v1/user/check/send$', composer.check_send),
+    url(r'^api/v1/mobile/check/find$', composer.mobile_check),
+    url(r'^api/v1/user/findPwd$', composer.find_password),
 ]

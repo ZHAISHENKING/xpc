@@ -23,17 +23,19 @@
 	color: #999!important;
 }
 
+
     </style>
     <link rel="stylesheet" href="http://www.xinpianchang.com/public/css/new-web/font-icon.css?v=1524557927">
     <link rel="stylesheet" href="http://www.xinpianchang.com/public/css/new-web/common.css?v=1525946301">
     <style>
 	.fw_600{font-weight: 500;}
 
+
     </style>
     <!-- <script src="http://www.xinpianchang.com/public/js/wb.js" type="text/javascript" charset="utf-8"></script> -->
     <script>if (top.location != location){top.location.href = location.href;}</script>
     <script>
-	var userid = 10356603;
+	var userid = {{request.composer.cid}};
 	var username = '名字四个字';
 	// 0 未知  1 男  2 女
 	var sex = '0';
@@ -47,6 +49,7 @@
 	var province = '';
 	// 入行年份
 	var entry_year = '0';
+
 
     </script>
     <script>
@@ -82,10 +85,12 @@ var _hmt = _hmt || [];
 });
 sa.quick('autoTrack');
 
+
     </script>
     <!-- start Dplus -->
     <script type="text/javascript">
         !function(a,b){if(!b.__SV){var c,d,e,f;window.dplus=b,b._i=[],b.init=function(a,c,d){function g(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]),a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var h=b;for("undefined"!=typeof d?h=b[d]=[]:d="dplus",h.people=h.people||[],h.toString=function(a){var b="dplus";return"dplus"!==d&&(b+="."+d),a||(b+=" (stub)"),b},h.people.toString=function(){return h.toString(1)+".people (stub)"},e="disable track track_links track_forms register unregister get_property identify clear set_config get_config get_distinct_id track_pageview register_once track_with_tag time_event people.set people.unset people.delete_user".split(" "),f=0;f<e.length;f++)g(h,e[f]);b._i.push([a,c,d])},b.__SV=1.1,c=a.createElement("script"),c.type="text/javascript",c.charset="utf-8",c.async=!0,c.src="//w.cnzz.com/dplus.php?id=1262268826",d=a.getElementsByTagName("script")[0],d.parentNode.insertBefore(c,d)}}(document,window.dplus||[]),dplus.init("1262268826");
+
     </script><!-- end Dplus -->
 
     <script>
@@ -96,6 +101,7 @@ sa.quick('autoTrack');
 
   ga('create', 'UA-76608034-3', 'auto');
   ga('send', 'pageview');
+
 
 
     </script>
@@ -328,6 +334,7 @@ sa.quick('autoTrack');
                 </a>
             </li>
         </ul>
+        {% if request.composer %}
         <ul class="fr right-part ">
             <li class="search-btn icon-search"></li>
             <li class="ring-btn hover-elem">
@@ -346,15 +353,15 @@ sa.quick('autoTrack');
                 </div>
             </li>
             <li class="user-face hover-elem">
-                <a href="/u10356603">
+                <a href="/u{{request.composer.cid}}">
                     <div class="user-face-con">
-                        <img src="https://oss-xpc0.xpccdn.com/passport/default.png">
+                        <img src="{{request.composer.avatar}}">
                     </div>
                 </a>
                 <div class="common-hover-wrap user-hover-wrap">
                     <div class="hover-box">
                         <ul class="list">
-                            <li><a href="/user/space/id-10356603/sort-pick">个人主页</a></li>
+                            <li><a href="/user/space/id-{{request.composer.cid}}/sort-pick">个人主页</a></li>
                             <li class="line"></li>
                             <li><a href="/user/course">我的课程</a></li>
                             <li><a href="/user/resource">我的素材</a></li>
@@ -366,7 +373,7 @@ sa.quick('autoTrack');
                                 <a href="/user/userverify/ts-intro">认证</a>
                             </li>
                             <li><a href="https://passport.xinpianchang.com/settings" target="_blank">账号设置</a></li>
-                            <li><a href="/user/login/ts-out">退出登录</a></li>
+                            <li><a href="/logout/">退出登录</a></li>
                         </ul>
 
                     </div>
@@ -374,6 +381,18 @@ sa.quick('autoTrack');
             </li>
             <li class="upload-btn"><a href="/upload/index/ts-upload_index?from=tab">上传作品</a></li>
         </ul>
+        {% else %}
+        <ul class="fr right-part no-login">
+            <li class="search-btn icon-search"></li>
+            <li class="reg-btn">
+                <a href="/login/">登录</a>
+            </li>
+            <li class="login-btn">
+                <a href="/register/">注册</a>
+            </li>
+        </ul>
+
+        {% endif %}
     </div>
 </div>
 <style>
@@ -395,6 +414,7 @@ sa.quick('autoTrack');
     .common-notice-cover-ground .tip-btn span{display: inline-block; width: 98px; height: 34px; font-size: 14px; font-weight: 500; line-height: 34px; border-radius: 2px; color: #fff; cursor: pointer;}
     .common-notice-cover-ground .tip-btn .close-sure{background-color: #fff; border: solid 0.5px rgba(153,153,153,.5); color: #333; margin-right: 20px;}
     .opacity-1{opacity: 1!important;}
+
 
 
 </style>
@@ -461,6 +481,7 @@ sa.quick('autoTrack');
     })
 
 
+
 </script>
 <style>
     /*.dialog-tip{position: absolute;color: #fff;z-index: 1000;opacity: 0;transition:all 1s;width: 100%;text-align: center;background-color: #e74b3b;height: 50px;line-height: 50px;transform:translateY(-50px);top:0;}
@@ -472,6 +493,7 @@ sa.quick('autoTrack');
     .tip-success{background-color: #28ca42;}
     .tip-success .tip-content{background-image: url(http://www.xinpianchang.com/public/images/success-notice@3x.png)}
     .dialog-tip-show{opacity: 1;transform:translateY(0px);-webkit-transform:translateY(0px);-moz-transform:translateY(0px);-ms-transform:translateY(0px);}
+
 
 </style>
 <div class="dialog-tip">
@@ -544,6 +566,7 @@ sa.quick('autoTrack');
     // })
 
 
+
 </script>
 <script src="http://www.xinpianchang.com/public/js/jquery-qrcode-0.14.0.js?v=1502434507"
         type="text/javascript"></script>
@@ -564,6 +587,7 @@ sa.quick('autoTrack');
 		userid: userid,
 		isadmin: isadmin
 	});
+
 
 </script>
 <script type="text/javascript">
@@ -731,6 +755,7 @@ sa.quick('autoTrack');
 	})
 
 
+
 </script>
 <div class="channel-container">
     <!-- 通栏广告 -->
@@ -881,7 +906,8 @@ sa.quick('autoTrack');
                     </div>
                     <div class="user-info">
                         {% if post.composers|length > 1 %}
-                        <a class="user-link v-center no-creator-space" href="javascript:;" data-userid="{{post.composers.0.cid}}">
+                        <a class="user-link v-center no-creator-space" href="javascript:;"
+                           data-userid="{{post.composers.0.cid}}">
 
                             <span class="authors-head-wrap" data-userid="{{post.composers.0.cid}}">
                                 {% for composer in post.composers %}
@@ -917,15 +943,16 @@ sa.quick('autoTrack');
                             </ul>
                         </div>
                         {% else %}
-                        <a class="user-link v-center enter-creator-space" href="javascript:;" data-userid="{{post.composers.0.cid}}">
+                        <a class="user-link v-center enter-creator-space" href="javascript:;"
+                           data-userid="{{post.composers.0.cid}}">
 							<span class="head-wrap" data-userid="{{post.composers.0.cid}}">
                                 <img class="avator v-center" src="{{post.composers.0.avatar}}">
                                 <span class="{{post.composers.0.verified}}"></span>
                             </span>
-							<span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">
+                            <span class="name fs_12 fw_300 c_b_3 v-center line-hide-1">
                                 {{post.composers.0.name}}
                             </span>
-						</a>
+                        </a>
                         <span class="role fs_12 fw_300 c_b_9 v-center line-hide-1">{{post.composers.0.roles}}</span>
                         {% endif %}
 
@@ -937,24 +964,25 @@ sa.quick('autoTrack');
         <div class="page-wrap">
             <div class="page">
                 {% if previous_page %}
-                <a href="/show_list/{{previous_page}}/" title="下一页"><span class="arrow-page icon-arrow-right"></span></a>
+                <a href="/show_list/{{previous_page}}/" title="下一页"><span
+                        class="arrow-page icon-arrow-right"></span></a>
                 {% endif %}
 
                 {% for page in display_pages %}
-                    {% if cur_page == page %}
-                        <span class="current">{{page}}</span>
-                    {% else %}
-                        <a href="/show_list/{{page}}/">{{page}}</a>
-                    {% endif %}
+                {% if cur_page == page %}
+                <span class="current">{{page}}</span>
+                {% else %}
+                <a href="/show_list/{{page}}/">{{page}}</a>
+                {% endif %}
                 {% endfor %}
 
                 {% if next_page %}
                 <a href="/show_list/{{next_page}}/" title="下一页"><span class="arrow-page icon-arrow-right"></span></a>
                 {% endif %}
             </div>
-            </div>
-            </div>
         </div>
+    </div>
+</div>
 </div>
 <script type="text/javascript">
 	var curCateid = '0',
@@ -1020,6 +1048,7 @@ sa.quick('autoTrack');
 			self.location = url;
 		}
 	})
+
 
 </script>
 <div class="footer-wrap">
@@ -1113,6 +1142,7 @@ sa.quick('autoTrack');
 	var share_desc = "";
 	var share_img = "";
 
+
 </script>
 <script src="http://www.xinpianchang.com/public/js/jquery.cookie.js?v=1502434507"></script>
 <script>
@@ -1121,6 +1151,7 @@ sa.quick('autoTrack');
 	},function(){
 		$(this).parent().children().first().css({borderBottom: '7px solid #323232'});
 	});
+
 
 </script>
 <script>
@@ -1142,9 +1173,10 @@ sa.quick('autoTrack');
 	});
 
 
+
 </script>
 <script>
-var userid=10356603;
+var userid={{request.composer.cid}};
 if (userid) {
 	$('.needLogin').removeClass('needLogin');
 };
@@ -1207,6 +1239,7 @@ $(function(){
 });
 
 
+
 </script>
 <script type="text/javascript">
 function sns_conform(title,content,next_func){
@@ -1221,6 +1254,7 @@ function sns_conform(title,content,next_func){
 	});
 
 }
+
 
 </script>
 <!-- <script src="http://www.xinpianchang.com/public/js/common.js?v=1522232897" type="text/javascript"></script> -->
@@ -1267,6 +1301,7 @@ $(document).ready(function(){
 });
 
 
+
 </script>
 
 <script src="http://www.xinpianchang.com/public/js/baidu_persona.js?v=1502434507"></script>
@@ -1284,6 +1319,7 @@ $(document).ready(function(){
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+
 
 </script>
 

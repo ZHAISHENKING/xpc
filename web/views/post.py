@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from web.models import Post, Comment
+
+from web.helpers.utils import multi_encrypt
+from web.models import Post, Comment, Composer
 
 
 def show_list(request, page=1):
@@ -47,7 +49,11 @@ def show_list(request, page=1):
 
 def detail(request, pid):
     """视频详情页"""
+
+    if 'history' not in request.session:
+        request.session['history'] = []
     post = Post.objects.get(pid=pid)
+    request.session['history'].append(pid)
     return render(request, 'post.html', locals())
 
 

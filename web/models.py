@@ -6,7 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from __future__ import unicode_literals
-
+import random
 from django.db import models
 
 
@@ -33,11 +33,13 @@ class Composer(models.Model):
     verified = models.CharField(max_length=128, blank=True, null=True)
     name = models.CharField(max_length=128)
     intro = models.TextField(blank=True, null=True)
-    like_counts = models.IntegerField()
-    fans_counts = models.IntegerField()
-    follow_counts = models.IntegerField()
+    like_counts = models.IntegerField(default=0)
+    fans_counts = models.IntegerField(default=0)
+    follow_counts = models.IntegerField(default=0)
     location = models.CharField(max_length=512)
     career = models.CharField(max_length=512)
+    phone = models.CharField(max_length=11, blank=True, null=True)
+    password = models.CharField(max_length=36, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -112,3 +114,19 @@ class Post(models.Model):
         raw_img, sep, param = self.preview.partition('@')
         param = "960w_540h_50-30bl_1e_1c"
         return '%s%s%s' % (raw_img, sep, param)
+
+
+class Code(models.Model):
+    code_id = models.BigAutoField(primary_key=True)
+    phone = models.BigIntegerField()
+    code = models.BigIntegerField()
+    created_at = models.DateTimeField()
+    ip = models.CharField(max_length=32)
+
+    class Meta:
+        managed = False
+        db_table = 'codes'
+
+    def gen_code(self):
+        self.code = str(random.randint(100000, 999999))
+        return self.code
