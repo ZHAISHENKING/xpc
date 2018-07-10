@@ -35,7 +35,7 @@
     <!-- <script src="http://www.xinpianchang.com/public/js/wb.js" type="text/javascript" charset="utf-8"></script> -->
     <script>if (top.location != location){top.location.href = location.href;}</script>
     <script>
-	var userid = {{request.composer.cid}};
+	var userid={{request.composer.cid|default:0}};
 	var username = '名字四个字';
 	// 0 未知  1 男  2 女
 	var sex = '0';
@@ -353,7 +353,7 @@ sa.quick('autoTrack');
                 </div>
             </li>
             <li class="user-face hover-elem">
-                <a href="/u{{request.composer.cid}}">
+                <a href="/u{{request.composer.cid|default:0}}">
                     <div class="user-face-con">
                         <img src="{{request.composer.avatar}}">
                     </div>
@@ -361,7 +361,7 @@ sa.quick('autoTrack');
                 <div class="common-hover-wrap user-hover-wrap">
                     <div class="hover-box">
                         <ul class="list">
-                            <li><a href="/user/space/id-{{request.composer.cid}}/sort-pick">个人主页</a></li>
+                            <li><a href="/user/space/id-{{request.composer.cid|default:0}}/sort-pick">个人主页</a></li>
                             <li class="line"></li>
                             <li><a href="/user/course">我的课程</a></li>
                             <li><a href="/user/resource">我的素材</a></li>
@@ -1176,7 +1176,7 @@ sa.quick('autoTrack');
 
 </script>
 <script>
-var userid={{request.composer.cid}};
+var userid={{request.composer.cid|default:0}};
 if (userid) {
 	$('.needLogin').removeClass('needLogin');
 };

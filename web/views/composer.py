@@ -8,13 +8,13 @@ from web.helpers.utils import multi_encrypt, send_sms_code
 
 
 def oneuser(request, cid):
-    composer = Composer.objects.get(cid=cid)
+    composer = Composer.get(cid=cid)
     composer.recent_posts = composer.posts[:2]
     return render(request, 'oneuser.html', locals())
 
 
 def homepage(request, cid):
-    composer = Composer.objects.get(cid=cid)
+    composer = Composer.get(cid=cid)
     first_post, *rest_posts = composer.posts
     return render(request, 'homepage.html', locals())
 
@@ -120,7 +120,7 @@ def logout(request):
 
 
 def check_send(request):
-    """1 发送验证码"""
+    """找回密码1 发送验证码"""
     phone = request.POST.get('phone')
     # 先看看用户是否存在
     composer = Composer.objects.filter(phone=phone).first()
@@ -144,7 +144,7 @@ def check_send(request):
 
 
 def mobile_check(request):
-    """2 验证手机号和验码码"""
+    """找回密码2 验证手机号和验码码"""
     phone = request.POST.get('phone')
     code = request.POST.get('code')
     # 先查看用户是否存在
@@ -167,7 +167,7 @@ def mobile_check(request):
 
 
 def find_password(request):
-    """3 重置密码"""
+    """找回密码3 重置密码"""
     # password: 123456
     # reset_password: 123456
     password = request.POST.get('password')

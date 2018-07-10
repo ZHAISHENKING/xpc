@@ -13,11 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import TemplateView
 from web.views import post, composer
-from django.conf import settings
 
 
 urlpatterns = [
@@ -32,6 +31,7 @@ urlpatterns = [
     url(r'^api/v1/mobile/send$', composer.send_code),  # 发送手机验证码
     url(r'^api/v1/user/register$', composer.do_register),  # 执行注册操作
     url(r'^login/$', TemplateView.as_view(template_name='login.html')),  # 显示登录页面
+    url(r'^login_iframe/$', TemplateView.as_view(template_name='login_iframe.html')),  # 显示登录页面
     url(r'^api/v1/user/login$', composer.do_login),  # 执行登录操作
     url(r'^logout/$', composer.logout),  # 执行注销操作
     # 忘记密码页面
@@ -40,10 +40,14 @@ urlpatterns = [
     url(r'^api/v1/user/check/send$', composer.check_send),
     url(r'^api/v1/mobile/check/find$', composer.mobile_check),
     url(r'^api/v1/user/findPwd$', composer.find_password),
+    url(r'^article/filmplay/ts-approve$', post.like),
 ]
 
 
+
+from django.conf import settings
 if settings.DEBUG:
+    from django.conf.urls import include, url
     import debug_toolbar
     urlpatterns = [
         url(r'^__debug__/', include(debug_toolbar.urls)),

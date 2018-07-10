@@ -16,7 +16,15 @@
         {% endif %}
         <div class="comment-btn fs_12 fw_600 c_b_9" data-replyid="{{comment.commentid}}">
             <span class="relpy-btn">回复</span><span
-                class="i-icon v-center"></span><span class="like-btn "><i class="approve-text">赞</i>&nbsp;<i
+                class="i-icon v-center"></span>
+            <span class="like-btn {{comment.approved}}">
+            <i class="approve-text">
+                {% if comment.approved %}
+                已赞
+                {% else %}
+                赞
+                {% endif %}
+            </i>&nbsp;<i
                 class="approve-counts">(<i class=counts>{{comment.like_counts}}</i>)</i></span></div>
     </div>
 </li>

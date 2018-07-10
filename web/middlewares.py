@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from web.helpers.utils import multi_encrypt
 from web.models import Composer
 
-need_login = ['/show_list/']
+not_need_login = ['/login/', '/register/', '/find_password/']
 
 
 class AuthMiddleware(object):
@@ -14,7 +14,7 @@ class AuthMiddleware(object):
     def __call__(self, request):
         # Code to be executed for each request before
         # the view (and later middleware) are called.
-        if request.path in need_login:
+        if request.path not in not_need_login:
             cid = request.COOKIES.get('cid')
             auth = request.COOKIES.get('Authorization')
             composer = Composer.objects.filter(cid=cid).first()
