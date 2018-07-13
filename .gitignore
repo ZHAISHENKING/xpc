@@ -112,3 +112,4 @@ pipelines.py
 # code
 .idea/
 .vscode/
+*.sql

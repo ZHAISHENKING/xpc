@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.views.generic import TemplateView
+from django.conf import settings
 from web.views import post, composer
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^show_list/$', post.show_list),
+    url(r'^$', post.show_list),
     url(r'^show_list/(?P<page>\d+)/$', post.show_list),
     url(r'^user/oneuser/userid-(?P<cid>\d+)$', composer.oneuser),
     url(r'^u(?P<cid>\d+)$', composer.homepage),
@@ -41,11 +43,12 @@ urlpatterns = [
     url(r'^api/v1/mobile/check/find$', composer.mobile_check),
     url(r'^api/v1/user/findPwd$', composer.find_password),
     url(r'^article/filmplay/ts-approve$', post.like),
+    url(r'^article/comment/ts-ajax_do$', post.add_comment),
 ]
 
 
 
-from django.conf import settings
+
 if settings.DEBUG:
     from django.conf.urls import include, url
     import debug_toolbar

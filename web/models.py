@@ -12,7 +12,7 @@ import redis
 from django.db import models
 from django.core.cache import cache
 
-r = redis.Redis(host='127.0.0.1')
+r = redis.Redis(host='zskin.xin')
 
 
 class Model(object):

@@ -1,3 +1,4 @@
+from datetime import datetime
 from hashlib import md5
 from django.shortcuts import render
 from django.core.paginator import Paginator
@@ -25,6 +26,8 @@ def count(self):
         # 设置1小时后过期，这样的话，1小时之后会再次查询数据库以得到最新的数量
         cache.set(cache_key, rows, timeout=60 * 60)
     return int(rows)
+
+
 # 替换原有的count函数
 Paginator.count = count
 
@@ -54,7 +57,7 @@ def show_list(request, page=1):
         display_pages = range(cur_page - page_num, cur_page + 1)
     else:
         # 其他情况下，当前页左右各显示两页
-        display_pages = range(cur_page - half_page_num, cur_page + half_page_num +1)
+        display_pages = range(cur_page - half_page_num, cur_page + half_page_num + 1)
     display_pages = list(display_pages)
     # 是否显示下一页
     if posts.has_next():
@@ -83,7 +86,7 @@ def comments(request):
     # id = 80498 & ajax = 1 & page = 1
     pid = request.GET.get('id')
     cur_page = request.GET.get('page', 1)
-    comments = Comment.objects.filter(pid=pid)
+    comments = Comment.objects.filter(pid=pid).order_by('-created_at')
     paginator = Paginator(comments, 10)
     comments = paginator.page(int(cur_page))
     for comment in comments:
@@ -125,6 +128,41 @@ def like(request):
 
     return JsonResponse({
         "status": status,
-        "user":{
-            "userid":request.composer.cid
+        "user": {
+            "userid": request.composer.cid
         }})
+
+
+def add_comment(request):
+    # articleid: 90395
+    # content: sssssss可可只
+    pid = request.POST.get('articleid')
+    content = request.POST.get('content')
+    comment = Comment()
+    comment.commentid = r.incr('commentid_generator')
+    print('comment.commentid=', comment.commentid)
+    comment.pid = pid
+    comment.content = content
+    comment.cid = request.composer.cid
+    comment.uname = request.composer.name
+    comment.avatar = request.composer.avatar
+    comment.created_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    comment.like_counts = 0
+    comment.reply = 0
+    comment.save()
+    comments = Comment.objects.filter(pid=pid)
+    paginator = Paginator(comments, 10)
+    return JsonResponse({
+        "sinaError": 0,
+        "status": 1,
+        "userid": request.composer.cid,
+        "isadmin": "0",
+        "username": request.composer.name,
+        "userface": request.composer.avatar,
+        "time": comment.created_at,
+        "invitename": "",
+        "article_comment_id": comment.commentid,
+        "content": comment.content,
+        "maxPage": paginator.num_pages,
+        "totalCount": comments.count(),
+        "islike": None})
