@@ -1,4 +1,4 @@
-# django项目
+# DjangoXPC
 
 
 
@@ -75,14 +75,11 @@ django项目的展示依赖于数据库数据，需要您先运行scrapy爬虫
 
 
 所用到的库
-
-supervisor
-
-pymysql
-
-redis
-
-django
-
-Scrapy
+```
+- supervisor
+- pymysql
+- redis
+- django
+- Scrapy
+```
 
